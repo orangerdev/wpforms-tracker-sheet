@@ -113,11 +113,33 @@
   wpforms_panel_field(
     'text',
     'settings',
+    'kirim_email_username',
+    $class->form_data,
+    esc_html__('Kirim.Email Username', 'wpforms-lite'),
+    [
+      'default' => $class->form->kirim_email_username,
+    ]
+  );
+
+  wpforms_panel_field(
+    'text',
+    'settings',
     'kirim_email_api_key',
     $class->form_data,
     esc_html__('Kirim.Email API Key', 'wpforms-lite'),
     [
-      'default' => $class->form->kirim_email_,
+      'default' => $class->form->kirim_email_api_key,
+    ]
+  );
+
+  wpforms_panel_field(
+    'text',
+    'settings',
+    'kirim_email_list_id',
+    $class->form_data,
+    esc_html__('Kirim.Email List ID', 'wpforms-lite'),
+    [
+      'default' => $class->form->kirim_email_list_id,
     ]
   );
 
