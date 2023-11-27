@@ -346,7 +346,7 @@ add_filter('wpforms_process_initial_errors', function ($errors, $form_data) {
     'name' => '',
     'phoneNumber' => '',
     'email' => '',
-    'country'  => pll_current_language(),
+    'country'  => function_exists('pll_current_language') ? pll_current_language() : get_locale(),
     'source' => $tracker['source'],
     'utm_source' => $tracker['utm_source'],
     'utm_medium' => $tracker['utm_medium'],
